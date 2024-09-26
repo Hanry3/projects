@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sort the bubble clock</title>
+</head>
+<body>
+
+  <!-- SVG container for the clock -->
+  <svg viewBox="-80 -80 160 160" xmlns="http://www.w3.org/2000/svg">
+    <!-- Filter for blob effect -->
+    <filter id="blob" style="color-interpolation-filters:sRGB">
+      <feGaussianBlur stdDeviation="4"/>
+      <feComponentTransfer result="cutoff">
+        <feFuncR tableValues="0.83" type="discrete"/>
+        <feFuncG tableValues="0.58" type="discrete"/>
+        <feFuncB tableValues="0.11" type="discrete"/>
+        <feFuncA intercept="-9" slope="19" type="linear"/>
+      </feComponentTransfer>
+      <feComposite operator="over" in="SourceGraphic" in2="cutoff"/>
+    </filter>
+
+    <!-- Marker for arrow -->
+    <marker id="arrow" markerUnits="strokeWidth" orient="auto">
+      <path d="M -1,0 L -2,1.6 L 1,0 L-2,-1.6 z" />
+    </marker>
+
+    <!-- Definitions for reusable elements -->
+    <defs>
+      <g id="swap">
+        <path d="M -8.5,-60.4 A 14,15 0 0 1 8.5,-60.4"/>
+        <path d="M 8,-36.2 A 14,15 0 0 1 -8,-36.2"/>
+        <circle r="15" cy="-50"/>
+      </g>
+    </defs>
+
+    <!-- Group for swap buttons -->
+    <g id="swapper">
+      <use href="#swap" transform="rotate(15)"/>
+      <use href="#swap" transform="rotate(45)"/>
+      <use href="#swap" transform="rotate(75)"/>
+      <use href="#swap" transform="rotate(105)"/>
+      <use href="#swap" transform="rotate(135)"/>
+      <use href="#swap" transform="rotate(165)"/>
+      <use href="#swap" transform="rotate(195)"/>
+      <use href="#swap" transform="rotate(225)"/>
+      <use href="#swap" transform="rotate(255)"/>
+      <use href="#swap" transform="rotate(285)"/>
+      <use href="#swap" transform="rotate(315)"/>
+      <use href="#swap" transform="rotate(345)"/>
+    </g>
+
+    <!-- Group for clock numbers -->
+    <g id="outer">
+      <g id="at1"><path/><text y="-47">1</text><circle/></g>
+      <g id="at2"><path/><text y="-47">2</text><circle/></g>
+      <g id="at3"><path/><text y="-47">3</text><circle/></g>
+      <g id="at4"><path/><text y="-47">4</text><circle/></g>
+      <g id="at5"><path/><text y="-47">5</text><circle/></g>
+      <g id="at6"><path/><text y="-47">6</text><circle/></g>
+      <g id="at7"><path/><text y="-47">7</text><circle/></g>
+      <g id="at8"><path/><text y="-47">8</text><circle/></g>
+      <g id="at9"><path/><text y="-47">9</text><circle/></g>
+      <g id="at10"><path/><text y="-47">10</text><circle/></g>
+      <g id="at11"><path/><text y="-47">11</text><circle/></g>
+      <g id="at12"><path/><text y="-47">12</text><circle/></g>
+    </g>
+
+    <!-- Group for clock hands -->
+    <g id="clock">
+      <path class="hours" style="stroke-width:3" d="M0,4 0,-24"/>
+      <path class="minutes" d="M0,4 0,-36"/>
+    </g>
+  </svg>
+
+<script src="./script.js"></script>
+</body>
+</html>

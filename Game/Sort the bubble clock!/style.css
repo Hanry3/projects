@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1b2131;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Disable transition effects for passive SVG elements */
+svg.passive * {
+  transition: none !important;
+}
+
+/* Style for marker elements (arrows) */
+marker {
+  fill: #a05cc6;
+  overflow: visible;
+}
+
+/* Style for swap paths and circles */
+#swap {
+  fill: none;
+  stroke: #a05cc6;
+  stroke-width: 2;
+  marker-end: url(#arrow);
+}
+
+#swap circle {
+  opacity: 0;
+}
+
+/* Default style for swap buttons */
+#swapper use {
+  transform-origin: 0px 0px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Style for active swap buttons */
+#swapper use[data-low] {
+  opacity: 0.7;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+/* Style for hover state of active swap buttons */
+#swapper use[data-low]:hover {
+  opacity: 1;
+}
+
+/* Apply blob filter to outer group */
+#outer {
+  filter: url(#blob);
+}
+
+/* Set transition and transform origin for outer group elements */
+#outer > g {
+  transform-origin: 0px 0px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Style for outer group circles */
+#outer circle {
+  r: 9px;
+  cy: -50px;
+  fill: rgb(0 0 0 / 0);
+  stroke: #8f22cc;
+  stroke-width: 2;
+}
+
+/* Style for outer group paths */
+#outer path {
+  d: path('M0-60C3.3-60 6.1-58.4 8-56 9.6-54.1 10.2-51.5 10-49 9.8-47.2 9.1-45.4 8-44 6.1-41.6 3.3-40 0-40-3.3-40-6.1-41.6-8-44-9.1-45.4-9.8-47.2-10-49-10.2-51.5-9.6-54.1-8-56-6.1-58.4-3.3-60 0-60z');
+  fill: #d4941c;
+  transition: d 0.3s 0.1s ease-in-out;
+}
+
+/* Style for "before" state paths */
+#outer .before path {
+  d: path('M0-60C3.3-60 6.1-58.4 8-56 9.6-54.1 14.2-50.6 13.5-48.2 13-46.5 9.1-45.4 8-44 6.1-41.6 3.3-40 0-40-3.3-40-6.1-41.6-8-44-9.1-45.4-9.8-47.2-10-49-10.2-51.5-9.6-54.1-8-56-6.1-58.4-3.3-60 0-60z');
+}
+
+/* Style for "after" state paths */
+#outer .after path {
+  d: path('M0-60C3.3-60 6.1-58.4 8-56 9.6-54.1 10.2-51.5 10-49 9.8-47.2 9.1-45.4 8-44 6.1-41.6 3.3-40 0-40-3.3-40-6.1-41.6-8-44-9.1-45.4-13-46.5-13.5-48.2-14.2-50.6-9.6-54.1-8-56-6.1-58.4-3.3-60 0-60z');
+}
+
+/* Style for combined "before" and "after" state paths */
+#outer .before.after path {
+  d: path('M0-60C3.3-60 6.1-58.4 8-56 9.6-54.1 14.2-50.6 13.5-48.2 13-46.5 9.1-45.4 8-44 6.1-41.6 3.3-40 0-40-3.3-40-6.1-41.6-8-44-9.1-45.4-13-46.5-13.5-48.2-14.2-50.6-9.6-54.1-8-56-6.1-58.4-3.3-60 0-60z');
+}
+
+/* Style for outer group text */
+#outer text {
+  fill: white;
+  font-family: 'Noto Sans';
+  font-size: 9.5px;
+  text-anchor: middle;
+  transform-origin: 0px -50px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Style for clock hands */
+svg #clock {
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+/* Style for finished clock */
+svg.finished #clock {
+  opacity: 1;
+}
+
+/* Animation for rotating the clock hands */
+@keyframes round {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
