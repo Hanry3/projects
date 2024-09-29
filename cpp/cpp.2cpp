@@ -1,1 +1,82 @@
+#include <iostream>
+using namespace std;
+
+class Operation {
+public:
+    virtual double execute(double num1, double num2) = 0; // Pure virtual function
+};
+
+class Add : public Operation {
+public:
+    double execute(double num1, double num2) override {
+        return num1 + num2;
+    }
+};
+
+class Subtract : public Operation {
+public:
+    double execute(double num1, double num2) override {
+        return num1 - num2;
+    }
+};
+
+class Multiply : public Operation {
+public:
+    double execute(double num1, double num2) override {
+        return num1 * num2;
+    }
+};
+
+class Divide : public Operation {
+public:
+    double execute(double num1, double num2) override {
+        if (num2 == 0) {
+            throw invalid_argument("Cannot divide by zero!");
+        }
+        return num1 / num2;
+    }
+};
+
+class OperationFactory {
+public:
+    static Operation* getOperation(char operatorSign) {
+        switch (operatorSign) {
+            case '+':
+                return new Add();
+            case '-':
+                return new Subtract();
+            case '*':
+                return new Multiply();
+            case '/':
+                return new Divide();
+            default:
+                throw invalid_argument("Invalid operator!");
+        }
+    }
+};
+
+int main() {
+    double num1, num2;
+    char operatorSign;
+
+    cout << "Enter first number: ";
+    cin >> num1;
+
+    cout << "Enter operator (+, -, *, /): ";
+    cin >> operatorSign;
+
+    cout << "Enter second number: ";
+    cin >> num2;
+
+    try {
+        Operation* operation = OperationFactory::getOperation(operatorSign);
+        double result = operation->execute(num1, num2);
+        cout << "The result is: " << result << endl;
+        delete operation;
+    } catch (const exception& e) {
+        cerr << "Error: " << e.what() << endl;
+    }
+
+    return 0;
+}
 
