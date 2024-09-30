@@ -11,7 +11,7 @@ A brief, catchy description of your project goes here! For example:
 
 ---
 
-## ✨ Features
+## 💪 Features
 
 - 🔥 **High performance** with modern design
 - 💡 **Easy to use** interface and powerful tools
