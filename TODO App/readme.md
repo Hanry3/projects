@@ -1,17 +1,13 @@
-# Calculator
+To-Do App
+Overview
+This is a simple To-Do List Application built using HTML, CSS, and JavaScript. It allows users to add tasks, mark them as complete, and remove tasks once completed. The application features a clean, responsive user interface.
 
-A simple calculator built using **C++**, designed to perform basic arithmetic operations such as addition, subtraction, multiplication, division, and scientific notation.
-
-## Features
-- Addition, Subtraction, Multiplication, Division
-- Supports scientific notation
-- Error handling for invalid inputs and division by zero
-- Clean, simple, and user-friendly command-line interface
-
-## Technologies Used
-- **C++**: The core programming language used to implement the calculator.
-
-## How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/calculator.git
+Features
+Add new tasks.
+Mark tasks as completed.
+Remove tasks from the list.
+Responsive design with a simple and intuitive user interface.
+Technologies Used
+HTML: For the structure of the app.
+CSS: For styling the user interface.
+JavaScript: For adding interactivity (adding, marking, and deleting tasks).
