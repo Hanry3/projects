@@ -1,17 +1,12 @@
-# Calculator
+🟦 Animated Login Form 🟦
+📋 Overview
+This Animated Login Form is a beautifully designed login interface featuring smooth animations, responsive design, and stylish transitions. It provides an interactive and modern way for users to input their login credentials.
 
-A simple calculator built using **C++**, designed to perform basic arithmetic operations such as addition, subtraction, multiplication, division, and scientific notation.
-
-## Features
-- Addition, Subtraction, Multiplication, Division
-- Supports scientific notation
-- Error handling for invalid inputs and division by zero
-- Clean, simple, and user-friendly command-line interface
-
-## Technologies Used
-- **C++**: The core programming language used to implement the calculator.
-
-## How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/calculator.git
+✨ Features
+🎨 Sleek Animations: Eye-catching animations when interacting with input fields.
+📱 Responsive Design: Fully optimized for desktop and mobile devices.
+🔒 User-Friendly Interface: Clean and simple layout for easy navigation.
+🛠️ Technologies Used
+HTML: Structuring the layout of the form.
+CSS: Styling the form, creating animations, and ensuring responsive design.
+JavaScript (optional): For additional interactivity or form validation.
