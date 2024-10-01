@@ -1,17 +1,13 @@
-# Calculator
+🟢 Snake Game 🟢
+📋 Overview
+This project is a classic Snake Game built using HTML, CSS, and JavaScript. The game is fun, interactive, and features smooth controls and real-time score tracking. Navigate the snake using the keyboard and collect the food to grow longer, but avoid colliding with the walls or your own tail!
 
-A simple calculator built using **C++**, designed to perform basic arithmetic operations such as addition, subtraction, multiplication, division, and scientific notation.
-
-## Features
-- Addition, Subtraction, Multiplication, Division
-- Supports scientific notation
-- Error handling for invalid inputs and division by zero
-- Clean, simple, and user-friendly command-line interface
-
-## Technologies Used
-- **C++**: The core programming language used to implement the calculator.
-
-## How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/calculator.git
+✨ Features
+🎮 Classic Snake Gameplay: Move the snake around to collect food and grow longer.
+📊 Real-time Score: Keep track of your score as the snake eats more food.
+🖥️ Responsive Design: Fully playable on both desktop and mobile devices.
+🔄 Restart Functionality: Restart the game after a collision with the wall or snake.
+🛠️ Technologies Used
+HTML: Structure of the game elements.
+CSS: Basic styling for the game.
+JavaScript: Game logic, snake movement, and event handling.
