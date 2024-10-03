@@ -124,7 +124,10 @@ input::-moz-focus-inner {
   margin-top: 40px;
   transition: color 300ms;
   cursor: pointer;
+<<<<<<< HEAD
   
+=======
+>>>>>>> 1553e6da21fc0785dbbb80abf800fc2007c67cbb
 }
 #submit:focus {
   color: #f2f2f2;
