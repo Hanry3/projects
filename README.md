@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 Project 2024
 
 ![License](https://img.shields.io/github/license/your-username/your-repo)
 ![Contributors](https://img.shields.io/github/contributors/your-username/your-repo)
@@ -7,7 +7,7 @@
 
 A brief, catchy description of your project goes here! For example:
 
-> **Project Name** is a fast, lightweight, and highly customizable tool designed to make [your project type] easier, faster, and better.
+> **Project 2024** is a fast, lightweight, and highly customizable tool designed to make [your project type] easier, faster, and better.
 
 ---
 
