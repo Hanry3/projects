@@ -42,7 +42,12 @@ Feel free to explore the repositories to check out these projects and more!
 1. Clone the repository:
    ```bash
    git clone https://github.com/username/repository.git
-![image](https://github.com/user-attachments/assets/96ad6432-8a2e-49c6-a697-aae43bae2925)
+   ```
+2. Nevigate to the Project folder of your choice
+```bash
+    cd project-folder
+   ```
+3. Follow the specific instruction in the folder's README (if available) to run or contribute to the project
 
 ## 📄 License
 This repository is licensed under the MIT License. See the LICENSE file for more details.
