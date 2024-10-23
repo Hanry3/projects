@@ -79,4 +79,4 @@ This project is licensed under the MIT License.
 
 ## Author
 
-- **Hanry3** - 
+- **Hanry3** - [GitHub](https://github.com/Hanry3)
